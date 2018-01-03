@@ -1,0 +1,5 @@
+Crear la base de datos 
+
+CREATE DATABASE products
+
+exportar el archivo products.sql para obetner las tablas que se utilizaron 
