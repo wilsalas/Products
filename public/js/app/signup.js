@@ -27,7 +27,7 @@ $(document).ready(() => {
                         ClassGeneral.AlertMessage('Warning', data[1], 'warning')
                         break;
                     case "success":
-                        ClassGeneral.AlertMessage('Success', data[1], 'success')
+                        ClassGeneral.AlertMessage('Success', data[1], 'success', 'insert')
                         $('#frm_signup')[0].reset()
                         break;
                 }

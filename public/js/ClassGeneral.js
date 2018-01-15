@@ -1,5 +1,5 @@
 class ClassGeneral {
-    static AlertMessage(title, text, type) {
+    static AlertMessage(title, text, type, filter) {
         swal({
             title: title,
             html: text,
@@ -7,6 +7,10 @@ class ClassGeneral {
             allowOutsideClick: false,
             allowEscapeKey: false,
             allowEnterKey: false
+        }).then((result) => {
+            if (typeof filter !== 'undefined') {
+                location.href = '/';
+            }
         })
     }
 

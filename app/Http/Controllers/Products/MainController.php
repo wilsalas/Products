@@ -24,9 +24,9 @@ class MainController extends Controller
         if ($validator->fails()) {
             return response()->json(['errors', $this->GetMessageBag($validator)]);
         }
-        $users = Users::select('pass', 'id')->where('user', $req->email)->first();
+        $users = Users::select('pass', 'id' , 'user')->where('user', $req->email)->first();
         if ($users->pass == hash('sha1', hash('whirlpool', $req->password))) {
-            $sessions = array('id_user' => $users->id);
+            $sessions = array('id_user' => $users->id, 'user'=>$users->user);
             Session::put($sessions);
             return response()->json(['sucess', '/home']);
         } else {

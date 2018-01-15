@@ -1,5 +1,21 @@
-Crear la base de datos 
+1) Descargar composer e instalarlo 
+2) Utilizar el comando: composer update y esperar que actualize el proyecto
+   NOTA: Este comando se debe colocar en una terminal (cmd o git bash here) situado en la raiz del proyecto
+3) Copiar y pegar el archivo: .env.example, y renombrarlo a .env 
+   NOTA: Dentro del archivo .env en las lineas
+   DB_DATABASE=products
+   DB_USERNAME=root 
+   DB_PASSWORD=
+   en esas lineas colocan el nombre de la base de datos, su usuario en caso de no tener en mysql solo dejan el usuario root y si tienen contraseña la colocan si no solo dejar vacio
+4) Crear la base de datos en una consola sql en phpmyadmin o un gestor de base de datos mysql utilizando el comando, 
+   CREATE DATABASE products
+5) Importar el archivo products.sql para obtener las tablas que se utilizaron en el proyecto
+   NOTA: Cuando seleccionen el archivo products.sql en phpmyadmin deben desmarcar la opcion que dice: Habilite la revisión de las claves foráneas y presionan continuar
+6) Correr el proyecto con el comando: php artisan serve
+   NOTA: Si al ejecutar el servidor de laravel les aparece el error: 
+   The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.
+   Lo que deben hacer es en la consola generar una nueva llave para laravel esto lo pueden hacer utilizando el comando,
+   php artisan key:generate y luego ejecutar de nuevo php artisan serve y ahora si les ejecutara correctamente el proyecto
+7) El proyecto es totalmente libre para ser modificado y utilizado a su gusto. 
 
-CREATE DATABASE products
-
-exportar el archivo products.sql para obetner las tablas que se utilizaron 
+***********************Saludos*********************
